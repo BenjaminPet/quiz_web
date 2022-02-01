@@ -20,13 +20,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="create.html">CrateYourOwn</a>
+                <a class="nav-link active" href="create.html">CrateYourOwn</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Quizes
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -53,8 +53,27 @@
         <form action="">
             <div class="row">
                 <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto;">
-                  <h2>The Python quiz</h2>
-                  <button class="btn btn-primary" onclick="window.location.href='./quiz/python.html'">Python</button>
+                  <h2>Question 1</h2>
+                  <h3>Title</h3>
+                  <input type="text" id="title1">
+                  <h3>The Question</h3>
+                  <input type="text" id="qtext1" size="50">
+
+
+                  <h3>alternative 1</h3>
+                  <input type="text" id="alt1a" size="50">
+
+                  <h3>alternative 2</h3>
+                  <input type="text" id="alt1b" size="50">
+
+                  <h3>alternative 3</h3>
+                  <input type="text" id="alt1c" size="50">
+
+                  <h3>alternative 4</h3>
+                  <input type="text" id="alt1d" size="50">
+
+                  <h3>which of the options is correct</h3>
+                  <p>alternative  <input type="number" max="4" min="1" size="5"></p>
                 </div>
                 <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto;">
                   <h2>The C++ quiz</h2>
@@ -64,6 +83,8 @@
                   <h2>The HTML quiz</h2>
                   <button class="btn btn-primary" onclick="window.location.href='./quiz/html.html'">HTML</button>
                 </div>
+
+                <button class="btn btn-primary" type="submit">submit</button>
             </div>
         </form>
     </div>
