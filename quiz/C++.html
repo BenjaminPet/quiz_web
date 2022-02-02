@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>C++ Quiz</title>
+	<title>HTML Quiz</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/48a41085c1.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">QUIZ.com</a>
+          <a class="navbar-brand" href="#"><i class="fas fa-grin-squint-tears" style="margin: 10px;"></i>QUIZ.com</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="../index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="../create.html">CrateYourOwn</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  quizes
+                <a class="nav-link active dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Quizes
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Python</a></li>
-                  <li><a class="dropdown-item" href="#">C++</a></li>
-                  <li><a class="dropdown-item" href="#">HTML</a></li>
+                  <li><a class="dropdown-item" href="python.html">Python</a></li>
+                  <li><a class="dropdown-item" href="C++.html">C++</a></li>
+                  <li><a class="dropdown-item" href="html.html">HTML</a></li>
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
               </li>
             </ul>
             <form class="d-flex">
@@ -46,38 +44,87 @@
         </div>
     </nav> 
 
+    <div class="container" style="padding: 50px;">
 
-    <h1>Python quiz</h1>
+      <h1>HTML Quiz</h1>
+      <form onsubmit="check('one', '1')">
+        <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;" id="qone">
+          <h2>Question 1</h2>
+          <p>Hva bruker du HTML til</p>
 
-    <div>
-      <h2>question 1</h2>
-      <p>hva bruker man python til</p>
-      <button>Game developing</button>
-      <button>automasjon</button>
-      <button>endre utsene til websider</button>
-    </div>
-    <div>
-      <h2>question 2</h2>
-      <p>hva bruker man python til</p>
-      <button>Python</button>
-    </div>
-    <div>
-      <h2>question 3</h2>
-      <p>hva bruker man python til</p>
-      <button>Python</button>
-    </div>
-    <div>
-      <h2>question 4</h2>
-      <p>hva bruker man python til</p>
-      <button>Python</button>
-    </div>
-    <div>
-      <h2>question 5</h2>
-      <p>hva bruker man python til</p>
-      <button>Python</button>
+          <input type="radio" value="1" class="btn-check" name="one"  id="one1">
+          <label class="btn btn-outline-primary" for="one1">Lagge fundamente til websider</label>
+
+          <input type="radio" value="2" class="btn-check" name="one" id="one2">
+          <label class="btn btn-outline-primary" for="one2">Legge til funtionalitet på websiden</label>
+
+          <input type="radio" value="3" class="btn-check" name="one" id="one3">
+          <label class="btn btn-outline-primary" for="one3">Endre utsene til websider</label>    
+          <br><br>
+          <button class="btn btn-success" type="submit">submit</button>
+          <button class="btn btn-danger" type="reset">reset</button>
+
+        </div>   
+      </form>
+
+        <form onsubmit="check('two', '3')">
+          <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;" id="qtwo">
+              <h2>Question 2</h2>
+              <p>Hvordan loger du det du gjør</p>
+
+              <input type="radio" value="1" class="btn-check" name="two" id="two1">
+              <label class="btn btn-outline-primary" for="two1">print()</label>
+
+              <input type="radio" value="2" class="btn-check" name="two" id="two2">
+              <label class="btn btn-outline-primary" for="two2">show.text()</label>
+
+              <input type="radio" value="3" class="btn-check" name="two" id="two3">
+              <label class="btn btn-outline-primary" for="two3">console.log()</label>
+              <br><br>
+              <button class="btn btn-success" type="submit">submit</button>
+              <button class="btn btn-danger" type="reset">reset</button>
+          </div>
+        </form>
+        <form onsubmit="check('three', '2')">
+          <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;" id="qthree">
+              <h2>Question 3</h2>
+              <p>Hvor vanskelig er det å lære python</p>
+
+              <input type="radio" value="1" class="btn-check" name="three" id="three1">
+              <label class="btn btn-outline-primary" for="three1">vanskelig</label>
+
+              <input type="radio" value="2" class="btn-check" name="three" id="three2">
+              <label class="btn btn-outline-primary" for="three2">medium</label>
+
+              <input type="radio" value="3" class="btn-check" name="three" id="three3">          
+              <label class="btn btn-outline-primary" for="three3">lett</label>
+              <br><br>
+              <button class="btn btn-success" type="submit">submit</button>
+              <button class="btn btn-danger" type="reset">reset</button>
+          </div>
+        </form>
+        <form onsubmit="check('four', '3')">
+          <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;" id="qfour">
+              <h2>Question 4</h2>
+              <p>Hvordan commenterer du i coden</p>
+
+              <input type="radio" value="1" class="btn-check" name="four" id="four1">
+              <label class="btn btn-outline-primary" for="four1">/*    */ </label>
+
+              <input type="radio" value="2" class="btn-check" name="four" id="four2">
+              <label class="btn btn-outline-primary" for="four2">//</label>
+
+              <input type="radio" value="3" class="btn-check" name="four" id="four3">
+              <label class="btn btn-outline-primary" for="four3">< !-- -- > </label>
+              <br><br>
+              <button class="btn btn-success" type="submit">submit</button>
+              <button class="btn btn-danger" type="reset">reset</button>
+          </div>
+        </form>
+
+      
     </div>
 
-    
-<script src="/app.js"></script>
+<script type="text/javascript" src="../app.js"></script>
 </body>
 </html>

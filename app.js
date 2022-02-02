@@ -5,9 +5,20 @@ function mekequiz() {
     var element = document.getElementById("new");
     element.appendChild(tag);
 }
-function wrong() {
-    console.log("wrong");
-}
-function right() {
-    console.log("right");
+
+function check(q, num) {
+    var ele = document.getElementsByName(q);
+      
+    for (i = 0; i < ele.length; i++) {
+        if (ele[i].checked) {
+            var qone = ele[i].value;
+        }
+    }
+
+    if (qone === num) {
+        console.log("question " + q + " is right")
+        document.getElementById("q" + q).className = "col-12 bg-success border rounded"
+    } else {
+        document.getElementById("q" + q).className = "col-12 bg-danger border rounded"
+    }
 }
