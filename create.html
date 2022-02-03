@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Bootstrap Example</title>
+	<title>Create</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
@@ -50,43 +50,36 @@
 
         <p style="margin: 3%;">This is where you can create your own</p>
 
-        <form action="">
+        <form onsubmit="mekequiz()">
             <div class="row">
                 <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;">
                   <h2>Question 1</h2>
                   <h3>Title</h3>
-                  <input type="text" id="title1">
+                  <input type="text" id="title1" class="form-control" style="width: 30%;">
                   <h3>The Question</h3>
-                  <input type="text" id="qtext1" size="50">
+                  <input type="text" id="qtext1" class="form-control" style="width: 70%;">
 
 
                   <h3>alternative 1</h3>
-                  <input type="text" id="alt1a" size="50">
+                  <input type="text" id="alt1a" class="form-control" style="width: 70%;">
 
                   <h3>alternative 2</h3>
-                  <input type="text" id="alt1b" size="50">
+                  <input type="text" id="alt1b" class="form-control" style="width: 70%;">
 
                   <h3>alternative 3</h3>
-                  <input type="text" id="alt1c" size="50">
+                  <input type="text" id="alt1c" class="form-control" style="width: 70%;">
 
                   <h3>alternative 4</h3>
-                  <input type="text" id="alt1d" size="50">
+                  <input type="text" id="alt1d" class="form-control" style="width: 70%;">
 
-                  <h3>which of the options is correct</h3>
-                  <p>alternative  <input type="number" max="4" min="1" size="5"></p>
-                </div>
-                <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;">
-                  <h2>The C++ quiz</h2>
-                  <button class="btn btn-primary" onclick="window.location.href='./quiz/C++.html'">C++</button>
-                </div>
-                <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto;  margin-top: 5%;">
-                  <h2>The HTML quiz</h2>
-                  <button class="btn btn-primary" onclick="window.location.href='./quiz/html.html'">HTML</button>
+                  <h3 style="margin: 20px;">Which of the options is correct</h3>
+                  <h4 style="margin: 20px;">Alternative   <input type="number" max="4" min="1" class="form-control" style="width: 10%;"></h4>
                 </div>
 
                 <button class="btn btn-primary" type="submit">submit</button>
             </div>
         </form>
     </div>
+    <script type="text/javascript" src="../app.js"></script>
 </body>
 </html>

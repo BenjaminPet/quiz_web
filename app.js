@@ -1,4 +1,8 @@
 function mekequiz() {
+    
+    window.location.href = "file:///C:/Users/benja/Documents/GitHub/quiz_web/" + "index.html"
+
+
     var tag = document.createElement("div");
     var text = document.createTextNode("<h2>question 1</h2> <p>hva bruker man python til</p> <button>Game developing</button><button>automasjon</button><button>endre utsene til websider</button>");
     tag.appendChild(text);
