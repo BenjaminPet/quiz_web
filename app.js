@@ -22,3 +22,9 @@ function check(q, num) {
         document.getElementById("q" + q).className = "col-12 bg-danger border rounded"
     }
 }
+
+function restart(q) {
+    console.log("restart");
+    document.getElementById("q" + q).className = "col-12 bg-secondary border rounded";
+
+}

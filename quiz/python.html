@@ -47,7 +47,7 @@
     <div class="container" style="padding: 50px;">
 
       <h1>Python quiz</h1>
-      <form onsubmit="check('one', '2')">
+      <form onsubmit="check('one', '2'); return false" onreset="restart('one')">
         <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;" id="qone">
           <h2>Question 1</h2>
           <p>Hva bruker man python til</p>
@@ -67,7 +67,7 @@
         </div>   
       </form>
 
-        <form onsubmit="check('two', '1')">
+        <form onsubmit="check('two', '1'); return false" onreset="restart('two')">
           <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;" id="qtwo">
               <h2>Question 2</h2>
               <p>Hvordan loger du det du gjør</p>
@@ -85,7 +85,8 @@
               <button class="btn btn-danger" type="reset">reset</button>
           </div>
         </form>
-        <form onsubmit="check('three', '3')">
+        
+        <form onsubmit="check('three', '3'); return false" onreset="restart('three')">
           <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;" id="qthree">
               <h2>Question 3</h2>
               <p>Hvor vanskelig er det å lære python</p>
@@ -103,7 +104,8 @@
               <button class="btn btn-danger" type="reset">reset</button>
           </div>
         </form>
-        <form onsubmit="check('four', '1')">
+
+        <form onsubmit="check('four', '1'); return false" onreset="restart('four')">
           <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;" id="qfour">
               <h2>Question 4</h2>
               <p>Hvordan commenterer du i coden</p>
