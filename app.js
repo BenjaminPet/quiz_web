@@ -5,16 +5,14 @@ function mekequiz(num, qtext, alta, altb, altc, altd, awn) {
 
     quizlist.push(document.getElementById(qtext).value, document.getElementById(alta).value, document.getElementById(altb).value, document.getElementById(altc).value, document.getElementById(altd).value, document.getElementById(awn).value);
 
-    console.log(quizlist[0] + num)
+    console.log(document.getElementById("title").value + num)
 
     sessionStorage.setItem("title", document.getElementById("title").value)
     
-    for (var r = num; r < (num + 7); r++) {
+    for (var r = num; r < (num + 6); r++) {
         sessionStorage.setItem("quizlist" + r, quizlist[r])
         console.log(sessionStorage.getItem("quizlist" + r))
     }
-
-    window.location.href = "./test.html"
 
 }
 
@@ -23,7 +21,7 @@ function next() {
 }
 
 function addquiz() {
-    document.getElementById("title").innerHTML = sessionStorage.getItem("title");
+    document.getElementById("title1").innerHTML = sessionStorage.getItem("title");
     for(var e = 0; e < 10; e++) {
     document.getElementById("in" + e).innerHTML = sessionStorage.getItem("quizlist" + e);
     }
