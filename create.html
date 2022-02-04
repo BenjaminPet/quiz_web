@@ -50,12 +50,12 @@
 
         <p style="margin: 3%;">This is where you can create your own</p>
 
-        <form onsubmit="mekequiz(); return false">
+        <form onsubmit="mekequiz(0, 'qtext1', 'alt1a', 'alt1b', 'alt1c', 'alt1d', 'awn1'); return false">
             <div class="row">
                 <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;">
                   <h2>Question 1</h2>
                   <h3>Title</h3>
-                  <input type="text" id="title1" class="form-control" style="width: 30%;">
+                  <input type="text" id="title" class="form-control" style="width: 30%;">
                   <h3>The Question</h3>
                   <input type="text" id="qtext1" class="form-control" style="width: 70%;">
 
@@ -73,12 +73,42 @@
                   <input type="text" id="alt1d" class="form-control" style="width: 70%;">
 
                   <h3 style="margin: 20px;">Which of the options is correct</h3>
-                  <h4 style="margin: 20px;">Alternative   <input type="number" max="4" min="1" class="form-control" style="width: 10%;"></h4>
+                  <h4 style="margin: 20px;">Alternative   <input type="number" max="4" min="1" id="awn1" class="form-control" style="width: 10%;"></h4>
                 </div>
 
                 <button class="btn btn-primary" type="submit">submit</button>
             </div>
+          </form>
+            <form onsubmit="mekequiz(0, 'qtext2', 'alt2a', 'alt2b', 'alt2c', 'alt2d', 'awn2'); return false">
+              <div class="row">
+                  <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;">
+                    <h2>Question 1</h2>
+                    <h3>Title</h3>
+                    <input type="text" id="title1" class="form-control" style="width: 30%;">
+                    <h3>The Question</h3>
+                    <input type="text" id="qtext1" class="form-control" style="width: 70%;">
+  
+  
+                    <h3>alternative 1</h3>
+                    <input type="text" id="alt1a" class="form-control" style="width: 70%;">
+  
+                    <h3>alternative 2</h3>
+                    <input type="text" id="alt1b" class="form-control" style="width: 70%;">
+  
+                    <h3>alternative 3</h3>
+                    <input type="text" id="alt1c" class="form-control" style="width: 70%;">
+  
+                    <h3>alternative 4</h3>
+                    <input type="text" id=" " class="form-control" style="width: 70%;">
+  
+                    <h3 style="margin: 20px;">Which of the options is correct</h3>
+                    <h4 style="margin: 20px;">Alternative   <input type="number" max="4" min="1" id="awn1" class="form-control" style="width: 10%;"></h4>
+                  </div>
+  
+                  <button class="btn btn-primary" type="submit">submit</button>
+              </div>
         </form>
+        <button class="btn btn-primary" onclick="next()">next</button>
     </div>
     <script type="text/javascript" src="./app.js"></script>
 </body>

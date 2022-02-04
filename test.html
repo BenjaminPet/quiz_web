@@ -20,19 +20,19 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="./index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../create.html">CrateYourOwn</a>
+                <a class="nav-link" href="./create.html">CrateYourOwn</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link active dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Quizes
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="python.html">Python</a></li>
-                  <li><a class="dropdown-item" href="C++.html">C++</a></li>
-                  <li><a class="dropdown-item" href="html.html">HTML</a></li>
+                  <li><a class="dropdown-item" href="./quiz/python.html">Python</a></li>
+                  <li><a class="dropdown-item" href="./quiz/C++.html">C++</a></li>
+                  <li><a class="dropdown-item" href="./quiz/html.html">HTML</a></li>
                 </ul>
               </li>
             </ul>
@@ -46,20 +46,23 @@
 
     <div class="container" style="padding: 50px;">
 
-      <h1 id="title1">Python quiz</h1>
+      <h1 id="title">Python quiz</h1>
       <form onsubmit="check('one', '2'); return false" onreset="restart('one')">
         <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;" id="qone">
           <h2>Question 1</h2>
-          <p is="text1">Hva bruker man python til</p>
+          <p id="in0"></p>
 
           <input type="radio" value="1" class="btn-check" name="one"  id="one1">
-          <label class="btn btn-outline-primary" for="one1" id="">Game developing</label>
+          <label class="btn btn-outline-primary" for="one1" id="in1"></label>
 
           <input type="radio" value="2" class="btn-check" name="one" id="one2">
-          <label class="btn btn-outline-primary" for="one2">Automasjon</label>
+          <label class="btn btn-outline-primary" for="one2" id="in2"></label>
 
           <input type="radio" value="3" class="btn-check" name="one" id="one3">
-          <label class="btn btn-outline-primary" for="one3">Endre utsene til websider</label>    
+          <label class="btn btn-outline-primary" for="one3" id="in3"></label>   
+
+           <input type="radio" value="4" class="btn-check" name="one" id="one4">
+          <label class="btn btn-outline-primary" for="one4" id="in4"></label> 
           <br><br>
           <button class="btn btn-success" type="submit">submit</button>
           <button class="btn btn-danger" type="reset">reset</button>
@@ -70,16 +73,19 @@
         <form onsubmit="check('two', '1'); return false" onreset="restart('two')">
           <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;" id="qtwo">
               <h2>Question 2</h2>
-              <p>Hvordan loger du det du gjør</p>
+              <p id="in5"></p>
 
-              <input type="radio" value="1" class="btn-check" name="two" id="two1">
-              <label class="btn btn-outline-primary" for="two1">print()</label>
-
-              <input type="radio" value="2" class="btn-check" name="two" id="two2">
-              <label class="btn btn-outline-primary" for="two2">show.text()</label>
-
-              <input type="radio" value="3" class="btn-check" name="two" id="two3">
-              <label class="btn btn-outline-primary" for="two3">console.log()</label>
+              <input type="radio" value="1" class="btn-check" name="one"  id="one1">
+              <label class="btn btn-outline-primary" for="one1" id="in6"></label>
+    
+              <input type="radio" value="2" class="btn-check" name="one" id="one2">
+              <label class="btn btn-outline-primary" for="one2" id="in7"></label>
+    
+              <input type="radio" value="3" class="btn-check" name="one" id="one3">
+              <label class="btn btn-outline-primary" for="one3" id="in8"></label>   
+    
+               <input type="radio" value="4" class="btn-check" name="one" id="one4">
+              <label class="btn btn-outline-primary" for="one4" id="in9"></label> 
               <br><br>
               <button class="btn btn-success" type="submit">submit</button>
               <button class="btn btn-danger" type="reset">reset</button>

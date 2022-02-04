@@ -1,23 +1,32 @@
 
-var quizlist = []
+var quizlist = [];
 
-function mekequiz() {
+function mekequiz(num, qtext, alta, altb, altc, altd, awn) {
 
-    quizlist.push(document.getElementById("title1").value, document.getElementById("qtext1").value, document.getElementById("alt1a").value);
+    quizlist.push(document.getElementById(qtext).value, document.getElementById(alta).value, document.getElementById(altb).value, document.getElementById(altc).value, document.getElementById(altd).value, document.getElementById(awn).value);
 
-    console.log(quizlist);
+    console.log(quizlist[0] + num)
 
-    sessionStorage.setItem("quizlist", quizlist)
+    sessionStorage.setItem("title", document.getElementById("title").value)
+    
+    for (var r = num; r < (num + 7); r++) {
+        sessionStorage.setItem("quizlist" + r, quizlist[r])
+        console.log(sessionStorage.getItem("quizlist" + r))
+    }
 
     window.location.href = "./test.html"
 
 }
 
+function next() {
+    window.location.href = "./test.html"
+}
+
 function addquiz() {
-    var quizlist1 = sessionStorage.getItem("quizlist");
-    document.getElementById("title1").innerHTML = quizlist1[0];
-    document.getElementById("text1").innerHTML = quizlist1[1];
-    document.getElementById("").innerHTML = quizlist1[2];
+    document.getElementById("title").innerHTML = sessionStorage.getItem("title");
+    for(var e = 0; e < 10; e++) {
+    document.getElementById("in" + e).innerHTML = sessionStorage.getItem("quizlist" + e);
+    }
 }
 
 function check(q, num) {
