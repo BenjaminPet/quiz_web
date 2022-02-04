@@ -1,13 +1,23 @@
+
+var quizlist = []
+
 function mekequiz() {
-    
-    window.location.href = "file:///C:/Users/benja/Documents/GitHub/quiz_web/" + "index.html"
 
+    quizlist.push(document.getElementById("title1").value, document.getElementById("qtext1").value, document.getElementById("alt1a").value);
 
-    var tag = document.createElement("div");
-    var text = document.createTextNode("<h2>question 1</h2> <p>hva bruker man python til</p> <button>Game developing</button><button>automasjon</button><button>endre utsene til websider</button>");
-    tag.appendChild(text);
-    var element = document.getElementById("new");
-    element.appendChild(tag);
+    console.log(quizlist);
+
+    sessionStorage.setItem("quizlist", quizlist)
+
+    window.location.href = "./test.html"
+
+}
+
+function addquiz() {
+    var quizlist1 = sessionStorage.getItem("quizlist");
+    document.getElementById("title1").innerHTML = quizlist1[0];
+    document.getElementById("text1").innerHTML = quizlist1[1];
+    document.getElementById("").innerHTML = quizlist1[2];
 }
 
 function check(q, num) {
