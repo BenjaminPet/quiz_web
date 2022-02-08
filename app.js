@@ -1,32 +1,39 @@
-
+// gjør create.html variabler til session storage variabler
 var quizlist = [];
+
+var answer = 3;
 
 function mekequiz(num, qtext, alta, altb, altc, altd, awn) {
 
-    quizlist.push(document.getElementById(qtext).value, document.getElementById(alta).value, document.getElementById(altb).value, document.getElementById(altc).value, document.getElementById(altd).value, document.getElementById(awn).value);
-
-    console.log(document.getElementById("title").value + num)
+    quizlist.push(qtext, alta, altb, altc, altd, awn);
 
     sessionStorage.setItem("title", document.getElementById("title").value)
     
-    for (var r = num; r < (num + 6); r++) {
-        sessionStorage.setItem("quizlist" + r, quizlist[r])
-        console.log(sessionStorage.getItem("quizlist" + r))
+    for (var r = 0; r < 6; r++) {
+        rn = r + num;
+        sessionStorage.setItem("quizlist" + rn, document.getElementById(quizlist[rn]).value)
+        console.log(sessionStorage.getItem("quizlist" + rn ) + " " + num + " " + r);
     }
-
+    console.log("------------------------")
 }
 
+// til siden med dine spørsmål 
 function next() {
     window.location.href = "./test.html"
 }
 
+
+//add info to text.html
 function addquiz() {
+
     document.getElementById("title1").innerHTML = sessionStorage.getItem("title");
-    for(var e = 0; e < 10; e++) {
-    document.getElementById("in" + e).innerHTML = sessionStorage.getItem("quizlist" + e);
+    for(var e = 0; e < 12; e++) {
+        document.getElementById("in" + e).innerHTML = sessionStorage.getItem("quizlist" + e);
+        console.log(sessionStorage.getItem("quizlist" + e));
     }
 }
 
+// checking if it is correct
 function check(q, num) {
     var ele = document.getElementsByName(q);
       
@@ -35,6 +42,8 @@ function check(q, num) {
             var qone = ele[i].value;
         }
     }
+
+    console.log(awnser)
 
     if (qone === num) {
         console.log("question " + q + " is right")
