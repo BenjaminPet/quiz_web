@@ -1,8 +1,6 @@
 // gjør create.html variabler til session storage variabler
 var quizlist = [];
 
-var answer = 3;
-
 function mekequiz(num, qtext, alta, altb, altc, altd, awn) {
 
     quizlist.push(qtext, alta, altb, altc, altd, awn);
@@ -25,12 +23,36 @@ function next() {
 
 //add info to text.html
 function addquiz() {
+    console.log("nooooooooooooooooooo " + sessionStorage.getItem("quizlist5"));
+    console.log("nooooooooooooooooooo " + sessionStorage.getItem("quizlist11"));
+    console.log("nooooooooooooooooooo " + sessionStorage.getItem("quizlist17"));
 
     document.getElementById("title1").innerHTML = sessionStorage.getItem("title");
-    for(var e = 0; e < 12; e++) {
-        document.getElementById("in" + e).innerHTML = sessionStorage.getItem("quizlist" + e);
-        console.log(sessionStorage.getItem("quizlist" + e));
+
+    for(var e = 0; e < 24; e++) {
+        if (e === 5 || e === 11 || e === 17 || e === 23) {
+            console.log("quizlist" + e + "   " + sessionStorage.getItem("quizlist" + e));
+        } else {
+            document.getElementById("in" + e).innerHTML = sessionStorage.getItem("quizlist" + e);
+            console.log("quizlist" + e + "   " + sessionStorage.getItem("quizlist" + e));
+        }
     }
+}
+
+function checktest(q) {
+        if (q === "one") {
+            num = sessionStorage.getItem("quizlist5")
+            check(q, num);
+        } else if (q === "two") {
+            num = sessionStorage.getItem("quizlist11")
+            check(q, num);
+        } else if (q === "three") {
+            num = sessionStorage.getItem("quizlist17")
+            check(q, num);
+        } else if (q === "four") {
+
+        }
+
 }
 
 // checking if it is correct
@@ -43,14 +65,13 @@ function check(q, num) {
         }
     }
 
-    console.log(awnser)
 
-    if (qone === num) {
-        console.log("question " + q + " is right")
-        document.getElementById("q" + q).className = "col-12 bg-success border rounded"
-    } else {
-        document.getElementById("q" + q).className = "col-12 bg-danger border rounded"
-    }
+        if (qone === num) {
+            console.log("question " + q + " is right")
+            document.getElementById("q" + q).className = "col-12 bg-success border rounded"
+        } else {
+            document.getElementById("q" + q).className = "col-12 bg-danger border rounded"
+        }
 }
 
 function restart(q) {

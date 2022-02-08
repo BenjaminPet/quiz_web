@@ -47,7 +47,7 @@
     <div class="container" style="padding: 50px;">
 
       <h1 id="title1">Python quiz</h1>
-      <form onsubmit="check('one', '2'); return false" onreset="restart('one')">
+      <form onsubmit="checktest('one'); return false" onreset="restart('one')">
         <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;" id="qone">
           <h2>Question 1</h2>
           <p id="in0"></p>
@@ -67,13 +67,11 @@
           <button class="btn btn-success" type="submit">submit</button>
           <button class="btn btn-danger" type="reset">reset</button>
 
-          <label class="btn btn-outline-primary" for="one4" id="in5"></label> 
-          <div>hello</div>
 
         </div>   
       </form>
 
-        <form onsubmit="check('two', '1'); return false" onreset="restart('two')">
+        <form onsubmit="checktest('two'); return false" onreset="restart('two')">
           <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;" id="qtwo">
               <h2>Question 2</h2>
               <p id="in6"></p>
@@ -95,38 +93,44 @@
           </div>
         </form>
         
-        <form onsubmit="check('three', '3'); return false" onreset="restart('three')">
+        <form onsubmit="checktest('three'); return false" onreset="restart('three')">
           <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;" id="qthree">
               <h2>Question 3</h2>
-              <p>Hvor vanskelig er det å lære python</p>
+              <p id="in12"></p>
 
               <input type="radio" value="1" class="btn-check" name="three" id="three1">
-              <label class="btn btn-outline-primary" for="three1">vanskelig</label>
+              <label class="btn btn-outline-primary" for="three1" id="in13"></label>
 
               <input type="radio" value="2" class="btn-check" name="three" id="three2">
-              <label class="btn btn-outline-primary" for="three2">medium</label>
+              <label class="btn btn-outline-primary" for="three2" id="in14"></label>
 
               <input type="radio" value="3" class="btn-check" name="three" id="three3">          
-              <label class="btn btn-outline-primary" for="three3">lett</label>
+              <label class="btn btn-outline-primary" for="three3" id="in15"></label>
+
+              <input type="radio" value="4" class="btn-check" name="three" id="three4">          
+              <label class="btn btn-outline-primary" for="three4" id="in16"></label>
               <br><br>
               <button class="btn btn-success" type="submit">submit</button>
               <button class="btn btn-danger" type="reset">reset</button>
           </div>
         </form>
 
-        <form onsubmit="check('four', '1'); return false" onreset="restart('four')">
+        <form onsubmit="checktest('four'); return false" onreset="restart('four')">
           <div class="col-12 bg-secondary border rounded" style="margin: 1%; padding: 20px; flex: auto; margin-top: 5%;" id="qfour">
               <h2>Question 4</h2>
-              <p>Hvordan commenterer du i coden</p>
+              <p id="in18"></p>
 
               <input type="radio" value="1" class="btn-check" name="four" id="four1">
-              <label class="btn btn-outline-primary" for="four1">#</label>
+              <label class="btn btn-outline-primary" for="four1" id="in18"></label>
 
               <input type="radio" value="2" class="btn-check" name="four" id="four2">
-              <label class="btn btn-outline-primary" for="four2">//</label>
+              <label class="btn btn-outline-primary" for="four2" id="in19"></label>
 
               <input type="radio" value="3" class="btn-check" name="four" id="four3">
-              <label class="btn btn-outline-primary" for="four3">/*    */</label>
+              <label class="btn btn-outline-primary" for="four3" id="in20"></label>
+              
+              <input type="radio" value="3" class="btn-check" name="four" id="four3">
+              <label class="btn btn-outline-primary" for="four3" id="in21"></label>
               <br><br>
               <button class="btn btn-success" type="submit">submit</button>
               <button class="btn btn-danger" type="reset">reset</button>
