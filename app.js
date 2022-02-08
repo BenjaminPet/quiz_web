@@ -20,6 +20,11 @@ function next() {
     window.location.href = "./test.html"
 }
 
+// til siden med dine spørsmål 
+function result() {
+    window.location.href = "./result.html"
+}
+
 
 //add info to text.html
 function addquiz() {
@@ -50,7 +55,8 @@ function checktest(q) {
             num = sessionStorage.getItem("quizlist17")
             check(q, num);
         } else if (q === "four") {
-
+            num = sessionStorage.getItem("quizlist23")
+            check(q, num);
         }
 
 }
