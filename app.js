@@ -20,7 +20,7 @@ function next() {
     window.location.href = "./test.html"
 }
 
-// til siden med dine spørsmål 
+// til siden med dine svarene
 function result() {
     window.location.href = "./result.html"
 }
@@ -73,11 +73,18 @@ function check(q, num) {
 
 
         if (qone === num) {
-            console.log("question " + q + " is right")
+            console.log("question " + q + " is right");
+            sessionStorage.setItem(q + "1", true)
             document.getElementById("q" + q).className = "col-12 bg-success border rounded"
         } else {
             document.getElementById("q" + q).className = "col-12 bg-danger border rounded"
         }
+
+    
+}
+
+function score() {
+    
 }
 
 function restart(q) {
